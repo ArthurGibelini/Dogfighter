@@ -16,10 +16,14 @@ ENTITY_SPEED = {
     'Lvl1Bg3' : 3,
     'Lvl1Bg4' : 4,
     'Lvl1Bg5' : 5,
-    'Player1' : 4,
-    'Player2' : 4,
-    'Enemy1' : 2,
-    'Enemy2' : 3,
+    'Player1' : 3,
+    'Player1Shot' : 4,
+    'Player2' : 3,
+    'Player2Shot': 4,
+    'Enemy1' : 3,
+    'Enemy1Shot': 4,
+    'Enemy2' : 2,
+    'Enemy2Shot': 3,
 }
 
 ENTITY_HEALTH = {
@@ -30,11 +34,21 @@ ENTITY_HEALTH = {
     'Lvl1Bg4' : 999,
     'Lvl1Bg5' : 999,
     'Player1' : 300,
+    'Player1Shot': 1,
     'Player2' : 300,
+    'Player2Shot': 1,
     'Enemy1' : 30,
+    'Enemy1Shot': 1,
     'Enemy2' : 50,
+    'Enemy2Shot': 1,
 }
 
+ENTITY_SHOT_DELAY = {
+    'Player1': 15,
+    'Player2': 15,
+    'Enemy1': 80,
+    'Enemy2': 70,
+}
 # M
 MENU_OPTION = ('NEW GAME 1P',
                'NEW GAME 2P - COOP',
