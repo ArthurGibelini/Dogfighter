@@ -6,6 +6,8 @@ C_ORANGE = (255,156,0)
 C_BLACK = (0,0,0)
 C_WHITE = (255,255,255)
 C_INDIGO = (63,72,204)
+C_GREEN = (0,128,0)
+C_CYAN = (0,128,128)
 
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -16,6 +18,9 @@ ENTITY_SPEED = {
     'Lvl1Bg3' : 3,
     'Lvl1Bg4' : 4,
     'Lvl1Bg5' : 5,
+    'Lvl2Bg0': 0,
+    'Lvl2Bg1': 1,
+    'Lvl2Bg2': 2,
     'Player1' : 3,
     'Player1Shot' : 4,
     'Player2' : 3,
@@ -27,17 +32,20 @@ ENTITY_SPEED = {
 }
 
 ENTITY_HEALTH = {
-    'Lvl1Bg0' : 999,
-    'Lvl1Bg1' : 999,
-    'Lvl1Bg2' : 999,
-    'Lvl1Bg3' : 999,
-    'Lvl1Bg4' : 999,
-    'Lvl1Bg5' : 999,
-    'Player1' : 300,
+    'Lvl1Bg0' : 9999,
+    'Lvl1Bg1' : 9999,
+    'Lvl1Bg2' : 9999,
+    'Lvl1Bg3' : 9999,
+    'Lvl1Bg4' : 9999,
+    'Lvl1Bg5' : 9999,
+    'Lvl2Bg0': 9999,
+    'Lvl2Bg1': 9999,
+    'Lvl2Bg2': 9999,
+    'Player1' : 100,
     'Player1Shot': 1,
-    'Player2' : 300,
+    'Player2' : 100,
     'Player2Shot': 1,
-    'Enemy1' : 30,
+    'Enemy1' : 25,
     'Enemy1Shot': 1,
     'Enemy2' : 50,
     'Enemy2Shot': 1,
@@ -49,6 +57,47 @@ ENTITY_SHOT_DELAY = {
     'Enemy1': 80,
     'Enemy2': 70,
 }
+
+ENTITY_DAMAGE = {
+    'Lvl1Bg0' : 0,
+    'Lvl1Bg1' : 0,
+    'Lvl1Bg2': 0,
+    'Lvl1Bg3': 0,
+    'Lvl1Bg4': 0,
+    'Lvl1Bg5': 0,
+    'Lvl2Bg0': 0,
+    'Lvl2Bg1': 0,
+    'Lvl2Bg2': 0,
+    'Player1' : 10,
+    'Player1Shot' : 25,
+    'Player2' : 10,
+    'Player2Shot': 25,
+    'Enemy1': 10,
+    'Enemy1Shot': 15,
+    'Enemy2': 10,
+    'Enemy2Shot': 25,
+}
+
+ENTITY_SCORE = {
+    'Lvl1Bg0' : 0,
+    'Lvl1Bg1' : 0,
+    'Lvl1Bg2': 0,
+    'Lvl1Bg3': 0,
+    'Lvl1Bg4': 0,
+    'Lvl1Bg5': 0,
+    'Lvl2Bg0': 0,
+    'Lvl2Bg1': 0,
+    'Lvl2Bg2': 0,
+    'Player1': 0,
+    'Player1Shot': 0,
+    'Player2': 0,
+    'Player2Shot': 0,
+    'Enemy1': 125,
+    'Enemy1Shot': 0,
+    'Enemy2': 90,
+    'Enemy2Shot': 0,
+}
+
 # M
 MENU_OPTION = ('NEW GAME 1P',
                'NEW GAME 2P - COOP',
