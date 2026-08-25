@@ -13,7 +13,7 @@ class Menu:
         self.surf = pygame.image.load('./asset/MenuBG.png').convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
 
-    def run(self, ):
+    def run(self):
         menu_option = 0
         pygame.mixer_music.load('./asset/MenuMsc.ogg')
         pygame.mixer_music.play(-1)
@@ -21,12 +21,16 @@ class Menu:
             # DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(text_size=80, text="Dogfighter", text_color=C_GREY, text_center_pos=((WIN_WIDTH / 2), 70))
+            self.control_text(text_size=25, text="Controls", text_color=C_GREY, text_center_pos=((WIN_WIDTH - 125), 150))
+            self.control_text(text_size=25, text="Player1 - Player 2 ", text_color=C_GREY, text_center_pos=((WIN_WIDTH - 125), 170))
+            self.control_text(text_size=25, text="Move: Arrow keys - WASD", text_color=C_GREY, text_center_pos=((WIN_WIDTH - 125), 190))
+            self.control_text(text_size=25, text="Shoot: Right Ctrl - Space", text_color=C_GREY, text_center_pos=((WIN_WIDTH - 125), 210))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(text_size=30, text=MENU_OPTION[i], text_color=C_ORANGE, text_center_pos=((WIN_WIDTH / 2), 150 + i * 35))
+                    self.menu_text(text_size=30, text=MENU_OPTION[i], text_color=C_ORANGE, text_center_pos=((WIN_WIDTH / 3), 150 + i * 35))
                 else:
-                    self.menu_text(text_size=30, text=MENU_OPTION[i], text_color=C_INDIGO, text_center_pos=((WIN_WIDTH / 2), 150 + i * 35))
+                    self.menu_text(text_size=30, text=MENU_OPTION[i], text_color=C_INDIGO, text_center_pos=((WIN_WIDTH / 3), 150 + i * 35))
 
             pygame.display.flip()
 
@@ -53,6 +57,12 @@ class Menu:
 
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
+        text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
+        text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
+        text_rect: Rect = text_surf.get_rect(center=text_center_pos)
+        self.window.blit(source=text_surf, dest=text_rect)
+
+    def control_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
